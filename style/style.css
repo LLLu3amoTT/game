@@ -51,7 +51,13 @@ ul, li{
     position: relative;
 }
 
-.gamer-img, .change-head__img {
+.change-head__img {
+    padding: 2px;
+    height: 35px;
+    width: 35px;
+}
+
+.gamer-img {
     height: 35px;
     width: 35px;
 }
