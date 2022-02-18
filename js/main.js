@@ -1,8 +1,7 @@
 let posX = 0
 let posY = 0
-
-
-let MoveDiv = document.querySelector(".game-zone")
+let size_clinet = document.documentElement.clientWidth
+let size = document.querySelector(".game-zone")
 
 let btnLeft = document.querySelector("#left")
 let btnRight = document.querySelector("#right")
@@ -13,6 +12,12 @@ btnLeft.addEventListener('click',DivMoveLeft)
 btnRight.addEventListener('click',DivMoveRight)
 btnUp.addEventListener('click',DivMoveUp)
 btnDown.addEventListener('click',DivMoveDown)
+
+// Адаптив (xD)
+
+let size_zone = (size_clinet - 150) + "px"
+let size_zone_npx = (size_clinet - 150)
+size.style.width = size_zone
 
 // Управление
 
@@ -31,7 +36,7 @@ function DivMoveLeft(){
 
 function DivMoveRight(){
     let MoveDiv = document.querySelector('.gamer')
-    if(posX >= 460) {
+    if(posX >= (size_zone_npx - 30)) {
         alert("ERROR")
     }
     else {
